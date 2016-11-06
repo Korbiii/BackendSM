@@ -10,6 +10,9 @@ if (isset($_POST['friend'])) {
     $friend = $_POST ['friend'];
 
 
+
+
+
 }
 if (isset($_POST['email'])) {
     $email = $_POST['email'];
