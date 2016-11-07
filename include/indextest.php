@@ -11,8 +11,8 @@
         $('#test').on('click', function(e){
             $.ajax({
                 type: 'POST',
-                url: 'searchFriend.php',
-                data: {friend: "Alexander",email: "jonathanhaas@arcor.de"},
+                url: 'getSport.php',
+                data: {sportID: "5"},
                 success: function(received){
                     $("#test").html(received);
                     //just doesnt receive anything yet!

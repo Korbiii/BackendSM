@@ -10,7 +10,6 @@ if (isset($_POST['email'])) {
 if (isset($_POST['friend'])) {
     $friend = $_POST['friend'];
 }
-
 $friendship = new friendship();
 
 $friend2 = $friendship->search($friend);

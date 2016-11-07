@@ -14,6 +14,7 @@ if (isset($_POST['email'])) {
     $email = $_POST['email'];
 }
 
+
 $friendship = new friendship();
 $friendship->setFriend($email,$friend);
 
