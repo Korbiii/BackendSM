@@ -12,7 +12,7 @@
             $.ajax({
                 type: 'POST',
                 url: 'IndexFriendship.php',
-                data: {callID: "6",email: "alexa.reish@gmail.com",friendemail: "alexa.reish@gmail.com"},
+                data: {callID: "6",email: "Korbi@Korbi.de",friendemail: "alexa.reish@gmail.com"},
                 success: function(received){
                     $("#test").html(received);
                     //just doesnt receive anything yet!
