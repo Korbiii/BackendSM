@@ -1,8 +1,8 @@
 <?php
 
-include_once 'db.php';
+include_once '/../include/db.php';
 
-class User{
+class Accounts{
     
     private $db;
     private $db_table = "accounts";
@@ -20,9 +20,9 @@ class User{
         mysqli_close($this->db->getConnection());
         return false;
     }
-    public function createNewUser($username, $password, $email){
+    public function createNewAccount($username, $password, $email){
         $json = array();
-        $query = "INSERT INTO accounts (username, passcode, email) VALUES ('$username', '$password', '$email')";
+        $query = "INSERT INTO ".$this->db_table." (username, passcode, email) VALUES ('$username', '$password', '$email')";
         $inserted = mysqli_query($this->db->getConnection(), $query);
         if($inserted == 1){
             $json['success'] = 1;
@@ -35,7 +35,7 @@ class User{
         
         return $json;
     }
-    public function loginUsers($username, $password){
+    public function loginAccount($username, $password){
         $json = array();
         $userCanLogin = $this->isLoginExists($username, $password);
         if($userCanLogin){
